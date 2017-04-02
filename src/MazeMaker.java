@@ -73,7 +73,7 @@ public class MazeMaker {
 			}
 		}
 	}
-
+//delete this
 	private static ArrayList<Cell> getUnvisitedNeighbors(Cell c) {
 		return null;
 	}
