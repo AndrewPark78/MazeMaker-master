@@ -30,10 +30,10 @@ public class Cell {
 	}
 	
 	public void draw(Graphics g){
-		g.setColor(Color.BLUE);
+		g.setColor(Color.MAGENTA);
 		g.fillOval((x * size) + (size / 2) + X_MARGIN, (y * size) + (size / 2) + Y_MARGIN, 4, 4);
 		
-		g.setColor(Color.RED);
+		g.setColor(Color.BLACK);
 		if(northWall){
 			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + Y_MARGIN);
 		}
