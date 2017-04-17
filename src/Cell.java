@@ -4,47 +4,52 @@ import java.awt.Graphics;
 public class Cell {
 	public static final int X_MARGIN = 50;
 	public static final int Y_MARGIN = 50;
-	
+
 	private int x;
 	private int y;
-	
+
 	private int size = 20;
-	
+
 	private boolean visited;
-	
+
 	private boolean northWall;
 	private boolean southWall;
-	private boolean eastWall; 
+	private boolean eastWall;
 	private boolean westWall;
-	
-	public Cell(int x, int y){
+
+	public Cell(int x, int y) {
 		this.x = x;
 		this.y = y;
-		
+
 		visited = false;
-		
+
 		northWall = true;
 		southWall = true;
 		eastWall = true;
 		westWall = true;
 	}
-	
-	public void draw(Graphics g){
+
+	public void draw(Graphics g) {
 		g.setColor(Color.LIGHT_GRAY);
-		g.fillOval((x * size) + (size / 2) + X_MARGIN, (y * size) + (size / 2) + Y_MARGIN, 4, 4);
-		
+		g.fillOval((x * size) + (size / 2) + X_MARGIN, (y * size) + (size / 2)
+				+ Y_MARGIN, 4, 4);
+
 		g.setColor(Color.BLACK);
-		if(northWall){
-			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + Y_MARGIN);
+		if (northWall) {
+			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size)
+					+ size + X_MARGIN, (y * size) + Y_MARGIN);
 		}
-		if(southWall){
-			g.drawLine((x * size) + X_MARGIN, (y * size) + size + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + size + Y_MARGIN);
+		if (southWall) {
+			g.drawLine((x * size) + X_MARGIN, (y * size) + size + Y_MARGIN,
+					(x * size) + size + X_MARGIN, (y * size) + size + Y_MARGIN);
 		}
-		if(eastWall){
-			g.drawLine((x * size) + size + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + size + Y_MARGIN);
+		if (eastWall) {
+			g.drawLine((x * size) + size + X_MARGIN, (y * size) + Y_MARGIN,
+					(x * size) + size + X_MARGIN, (y * size) + size + Y_MARGIN);
 		}
-		if(westWall){
-			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + X_MARGIN, (y * size) + size + Y_MARGIN);
+		if (westWall) {
+			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size)
+					+ X_MARGIN, (y * size) + size + Y_MARGIN);
 		}
 	}
 
@@ -59,7 +64,7 @@ public class Cell {
 	public int getY() {
 		return y;
 	}
-
+	
 	public void setY(int y) {
 		this.y = y;
 	}
