@@ -2,13 +2,13 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Cell {
-	public static final int X_MARGIN = 100;
-	public static final int Y_MARGIN = 100;
+	public static final int X_MARGIN = 50;
+	public static final int Y_MARGIN = 50;
 	
 	private int x;
 	private int y;
 	
-	private int size = 100;
+	private int size = 20;
 	
 	private boolean visited;
 	
@@ -30,7 +30,7 @@ public class Cell {
 	}
 	
 	public void draw(Graphics g){
-		g.setColor(Color.MAGENTA);
+		g.setColor(Color.LIGHT_GRAY);
 		g.fillOval((x * size) + (size / 2) + X_MARGIN, (y * size) + (size / 2) + Y_MARGIN, 4, 4);
 		
 		g.setColor(Color.BLACK);
